@@ -105,7 +105,7 @@ def sendEmail(receiver,receiverInfo,number):
     msgRoot.attach(msgImage_wx)
 
     try:
-        smtp = smtplib.SMTP_SSL(email_server, smtp_port)
+        smtp = smtplib.SMTP_SSL(email_server, smtp_port, 'localhost')
         smtp.set_debuglevel(1)
         smtp.helo(email_server)
         smtp.ehlo(email_server)
